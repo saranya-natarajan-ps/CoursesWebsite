@@ -25,6 +25,16 @@ function init(){
                 anchor.text = "See details";  
                 detailsCell.appendChild(anchor);
 
+                const deleteCell = row.insertCell();
+                let link = document.createElement('a');
+                let delBtn = document.createElement("img");
+                delBtn.src = "images/delete.png"
+                delBtn.style.height ="35px"
+                link.href=`confirm-delete.html?cid=${data[i].id}`;
+                //link.text="Delete Course"
+                link.appendChild(delBtn);
+                deleteCell.appendChild(link);
+
             }
      });
 }
